@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.1.2 (2025-11-12)
+
+* Update JVM target to 11.
+
 ## 3.1.1 (2024-03-28)
 
 * Remove inexisting version of the `androidx.test:rules` dependency.

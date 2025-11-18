@@ -40,6 +40,12 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
+kotlin {
+    compilerOptions {
+        jvmTarget = JavaVersion.VERSION_17.toString()
+    }
+}
+
 android {
     namespace = 'io.flutter.plugins.pay_android'
     compileSdk = flutter.compileSdkVersion
@@ -47,10 +53,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
-    }
-    
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 
     sourceSets {

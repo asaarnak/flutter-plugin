@@ -42,7 +42,7 @@ apply plugin: 'kotlin-android'
 
 kotlin {
     compilerOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
+        jvmTarget = JvmTarget.fromTarget("17")
     }
 }
 

@@ -68,11 +68,11 @@ class _PaySampleAppState extends State<PaySampleApp> {
         PaymentConfiguration.fromAsset('default_google_pay_config.json');
   }
 
-  void onGooglePayResult(paymentResult) {
+  void onGooglePayResult(Map<String, dynamic> paymentResult) {
     debugPrint(paymentResult.toString());
   }
 
-  void onApplePayResult(paymentResult) {
+  void onApplePayResult(Map<String, dynamic> paymentResult) {
     debugPrint(paymentResult.toString());
   }
 

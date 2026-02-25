@@ -23,7 +23,8 @@ enum GooglePayButtonType {
   order,
   pay,
   plain,
-  subscribe
+  subscribe,
+  pix
 }
 
 /// The button themes supported on Google Pay.
@@ -144,7 +145,7 @@ class RawGooglePayButton extends StatelessWidget {
     }
   }
 
-  _onPlatformViewCreated(int viewId) {
+  void _onPlatformViewCreated(int viewId) {
     MethodChannel methodChannel = MethodChannel('$viewType/$viewId');
     methodChannel.setMethodCallHandler((call) async {
       if (call.method == 'onPressed') onPressed?.call();
@@ -166,6 +167,7 @@ extension on GooglePayButtonType {
         GooglePayButtonType.subscribe: 'subscribe',
         GooglePayButtonType.pay: 'pay',
         GooglePayButtonType.order: 'order',
+        GooglePayButtonType.pix: 'pix',
       }[this]!;
 }
 

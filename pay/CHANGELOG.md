@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.3.0 (2025-11-21)
+
+* Upgrade `pay_android` to `3.2.0`, which adds `pix` to the `GooglePayButtonType` enum.
+
 ## 3.2.1 (2025-03-28)
 
 * Upgrade `pay_android` to `3.1.1` which fixes a version conflict for the `androidx.test:rules` dependency.
